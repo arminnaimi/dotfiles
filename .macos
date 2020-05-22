@@ -34,6 +34,10 @@ brew install git
 echo "installing nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 echo "installing node lts (via nvm)"
 nvm install --lts
 
@@ -51,7 +55,7 @@ echo "installing a few global packages"
 npm install -g serve gatsby-cli create-react-app
 
 echo "installing apps with brew cask"
-brew cask install google-chrome itsycal visual-studio-code 1password skype zoomus spotify dropbox slack hyper tableplus cleanmymac docker insomnia sketch vlc whatsapp microsoft-edge
+brew cask install google-chrome itsycal visual-studio-code 1password skype zoomus spotify onedrive slack tableplus cleanmymac docker insomnia sketch vlc whatsapp microsoft-edge
 
 echo "generating an RSA token for GitLab/GitHub"
 mkdir -p ~/.ssh
