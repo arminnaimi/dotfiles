@@ -58,11 +58,17 @@ echo "installing apps with brew cask"
 brew cask install google-chrome itsycal visual-studio-code 1password skype zoomus spotify onedrive slack tableplus cleanmymac docker insomnia sketch vlc whatsapp microsoft-edge
 
 echo "generating an RSA token for GitLab/GitHub"
+
 mkdir -p ~/.ssh
+
 touch ~/.ssh/config
+
 ssh-keygen -t rsa -b 4096 -C "armin.naimi@gmail.com"
+
 echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_rsa" | tee ~/.ssh/config
+
 eval "$(ssh-agent -s)"
+
 echo "run 'pbcopy < ~/.ssh/id_rsa.pub' and paste that into GitLab/GitHub"
 
 echo "installing ohmyzsh"
