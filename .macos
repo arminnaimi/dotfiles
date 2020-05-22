@@ -51,10 +51,7 @@ echo "installing a few global packages"
 npm install -g serve gatsby-cli create-react-app
 
 echo "installing apps with brew cask"
-brew cask install google-chrome itsycal \
-visual-studio-code 1password skype zoomus spotify dropbox \ 
-slack hyper tableplus cleanmymac docker insomnia \ 
-sketch vlc whatsapp microsoft-edge
+brew cask install google-chrome itsycal visual-studio-code 1password skype zoomus spotify dropbox slack hyper tableplus cleanmymac docker insomnia sketch vlc whatsapp microsoft-edge
 
 echo "generating an RSA token for GitLab/GitHub"
 mkdir -p ~/.ssh
